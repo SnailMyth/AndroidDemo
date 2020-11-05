@@ -1,0 +1,75 @@
+<resources>
+  <string name="app_name">TestDemo</string>
+  <string name="action_settings">Settings</string>
+  <!-- Strings used for fragments for navigation -->
+  <string name="first_fragment_label">First Fragment</string>
+  <string name="second_fragment_label">Second Fragment</string>
+  <string name="third_fragment_label">Third Fragment</string>
+  <string name="login_fragment_label">Login Fragment</string>
+  <string name="next">Next</string>
+  <string name="previous">Previous</string>
+
+  <string name="hello_first_fragment">Hello first fragment</string>
+  <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+  <string-array name="range_array">
+    <item>0</item>
+    <item>100</item>
+    <item>200</item>
+    <item>300</item>
+    <item>400</item>
+    <item>500</item>
+    <item>不限</item>
+  </string-array>
+  <!-- Strings related to login -->
+  <string name="prompt_email">Email</string>
+  <string name="prompt_password">Password</string>
+  <string name="action_sign_in">Sign in or register</string>
+  <string name="action_sign_in_short">Sign in</string>
+  <string name="welcome">"Welcome!"</string>
+  <string name="invalid_username">Not a valid username</string>
+  <string name="invalid_password">Password must be >5 characters</string>
+  <string name="login_failed">"Login failed"</string>
+  <string name="title_activity_sec">SecActivity</string>
+  <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+  <string name="hello_world">Hello Square World!</string>
+
+  <integer-array name="rainbow">
+    <item>@color/rainbow_red</item>
+    <item>@color/rainbow_yellow</item>
+    <item>@color/rainbow_green</item>
+    <item>@color/rainbow_blue</item>
+    <item>@color/rainbow_purple</item>
+  </integer-array>
+  <string name="title_item_list">Items</string>
+  <string name="title_item_detail">Item Detail</string>
+  <string name="title_activity_main">MainActivity</string>
+  <string name="tab_text_1">Tab 1</string>
+  <string name="tab_text_2">Tab 2</string>
+
+  <string name="horizontal">水平滑动</string>
+  <string name="vertical">垂直滑动</string>
+  <string name="bottomScaleText">底层缩放</string>
+  <string name="bottomAlphaText">底层透明</string>
+  <string name="topScaleText">顶层缩放</string>
+  <string name="topAlphaText">顶层透明</string>
+  <string name="middleScaleText">中层缩放</string>
+  <string name="middleAlphaText">中层透明</string>
+  <string name="status" formatted="false">状态: %s</string>
+  <string name="idle">静止</string>
+  <string name="dragging_left">向左拖动</string>
+  <string name="dragging_right">向右拖动</string>
+  <string name="dragging_top">向上拖动</string>
+  <string name="dragging_bottom">向下拖动</string>
+  <string name="settling_left">向左调整</string>
+  <string name="settling_right">向右调整</string>
+  <string name="settling_top">向上调整</string>
+  <string name="settling_bottom">向下调整</string>
+  <string name="three_child">3子View</string>
+  <string name="five_child">5子View</string>
+  <string name="middle">中层子View</string>
+  <string name="bottom">底层子View</string>
+</resources>

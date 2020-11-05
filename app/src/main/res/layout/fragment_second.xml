@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SecondFragment"
+    >
+
+
+  <com.example.testdemo.view.GradientProgressView
+      android:id="@+id/textview_second"
+      android:layout_width="73dp"
+      android:layout_height="13dp"
+      android:layout_marginTop="30dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+
+  <com.example.testdemo.view.DoubleProgressBar
+      android:id="@+id/dpb"
+      android:layout_width="300dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="20dp"
+      app:freezeProgress="10000"
+      app:haveProgress="100"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textview_second"
+      />
+  <com.example.testdemo.view.wavetext.Wave
+      android:id="@+id/wave"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_marginTop="20dp"
+      app:layout_constraintEnd_toStartOf="@id/waveAntiAliased"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/dpb"
+      app:text="张"
+      />
+  <com.example.testdemo.view.wavetext.WaveAntiAliased
+      android:id="@+id/waveAntiAliased"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      app:layout_constraintEnd_toStartOf="@id/waveAntiAliased_Shader"
+      app:layout_constraintStart_toEndOf="@+id/wave"
+      app:layout_constraintTop_toTopOf="@+id/wave"
+      app:text="明"
+      />
+  <com.example.testdemo.view.wavetext.WaveAntiAliased_Shader
+      android:id="@+id/waveAntiAliased_Shader"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/waveAntiAliased"
+      app:layout_constraintTop_toTopOf="@+id/waveAntiAliased"
+      app:text="海"
+      />
+
+  <Button
+      android:id="@+id/button_second"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="20dp"
+      android:text="@string/previous"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
