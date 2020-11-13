@@ -11,7 +11,7 @@
   <com.example.testdemo.view.litepager.LitePager
       android:id="@+id/litePager"
       android:layout_width="0dp"
-      android:layout_height="400dp"
+      android:layout_height="250dp"
       app:autoScroll="true"
       app:autoScrollInterval="2000"
       app:flingDuration="500"
@@ -19,6 +19,21 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       />
+
+  <FrameLayout
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/litePager"
+      >
+    <com.example.testdemo.view.pathview.CanvasView
+        android:id="@+id/canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+  </FrameLayout>
+
 
   <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"

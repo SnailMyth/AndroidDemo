@@ -1,4 +1,4 @@
-package com.example.testdemo
+package com.example.testdemo.ui
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.testdemo.R
 import com.example.testdemo.R.id
 import com.example.testdemo.R.layout
 import com.google.android.material.floatingactionbutton.FloatingActionButton

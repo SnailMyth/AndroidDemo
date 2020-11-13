@@ -25,6 +25,12 @@ android {
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
   }
+
+  //禁用 Multiple APK 构建 开发阶段使用单apk
+  if (project.hasProperty("devBuild")) {
+    splits.abi.enable = false
+    splits.density.enable = false
+  }
 }
 
 dependencies {

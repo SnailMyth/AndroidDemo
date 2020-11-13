@@ -6,6 +6,8 @@ import java.lang.reflect.Field;
 
 public class ValueAnimatorUtil {
 
+
+  //低端机  动画时长缩放 被关闭
   /**
    * 重置动画缩放时长
    */

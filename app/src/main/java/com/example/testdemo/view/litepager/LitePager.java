@@ -1,7 +1,6 @@
 package com.example.testdemo.view.litepager;
 
 import android.animation.Animator;
-import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
@@ -178,8 +177,8 @@ public class LitePager extends ViewGroup implements Runnable {
     for (View view : views) {
       ViewGroup.LayoutParams lp = view.getLayoutParams();
       if (lp != null) {
-        if (!(lp instanceof LayoutParams)) {
-          view.setLayoutParams(new LayoutParams(lp));
+        if (!(lp instanceof LiteLayoutParams)) {
+          view.setLayoutParams(new LiteLayoutParams(lp));
         }
       }
       addView(view);
@@ -488,7 +487,7 @@ public class LitePager extends ViewGroup implements Runnable {
     if (Math.abs(mOffsetPercent) >= 1) {
       for (int i = 0; i < getChildCount(); i++) {
         View child = getChildAt(i);
-        LayoutParams lp = (LayoutParams) child.getLayoutParams();
+        LiteLayoutParams lp = (LiteLayoutParams) child.getLayoutParams();
         lp.from = lp.to;
       }
       isReordered = false;
@@ -498,7 +497,7 @@ public class LitePager extends ViewGroup implements Runnable {
     }
     for (int i = 0; i < getChildCount(); i++) {
       View child = getChildAt(i);
-      LayoutParams lp = (LayoutParams) child.getLayoutParams();
+      LiteLayoutParams lp = (LiteLayoutParams) child.getLayoutParams();
       if (is5Child()) {
         switch (lp.from) {
           case 0:
@@ -701,7 +700,7 @@ public class LitePager extends ViewGroup implements Runnable {
           //点击第一个子view不用播放动画，直接不拦截
           return false;
         } else {
-          LayoutParams lp = (LayoutParams) hitView.getLayoutParams();
+          LiteLayoutParams lp = (LiteLayoutParams) hitView.getLayoutParams();
           setSelection(lp.from);
           //拦截ACTION_UP事件，内部消费
           return true;
@@ -731,7 +730,7 @@ public class LitePager extends ViewGroup implements Runnable {
 
     int childCount = getChildCount();
     int width, height;
-    LayoutParams layoutParams;
+    LiteLayoutParams layoutParams;
 
     if (widthMode == MeasureSpec.EXACTLY) {
       width = widthSize;
@@ -740,7 +739,7 @@ public class LitePager extends ViewGroup implements Runnable {
       int maxChildWidth = 0;
       for (int i = 0; i < childCount; i++) {
         View child = getChildAt(i);
-        layoutParams = (LayoutParams) child.getLayoutParams();
+        layoutParams = (LiteLayoutParams) child.getLayoutParams();
         maxChildWidth = Math.max(maxChildWidth, child.getMeasuredWidth()
             + layoutParams.leftMargin + layoutParams.rightMargin);
       }
@@ -756,7 +755,7 @@ public class LitePager extends ViewGroup implements Runnable {
       int maxChildHeight = 0;
       for (int i = 0; i < childCount; i++) {
         View child = getChildAt(i);
-        layoutParams = (LayoutParams) child.getLayoutParams();
+        layoutParams = (LiteLayoutParams) child.getLayoutParams();
         maxChildHeight = Math.max(maxChildHeight, child.getMeasuredHeight()
             + layoutParams.topMargin + layoutParams.bottomMargin);
       }
@@ -821,7 +820,7 @@ public class LitePager extends ViewGroup implements Runnable {
   private int getBaseLine(View child, int start, int middle, int end) {
     int baseLine = 0;
 
-    LayoutParams lp = (LayoutParams) child.getLayoutParams();
+    LiteLayoutParams lp = (LiteLayoutParams) child.getLayoutParams();
     switch (lp.from) {
       case 0:
         switch (lp.to) {
@@ -874,7 +873,7 @@ public class LitePager extends ViewGroup implements Runnable {
    * @param child 目标子View
    */
   private void updateAlphaAndScale(View child) {
-    LayoutParams lp = (LayoutParams) child.getLayoutParams();
+    LiteLayoutParams lp = (LiteLayoutParams) child.getLayoutParams();
     switch (lp.from) {
       case 0:
         switch (lp.to) {
@@ -956,7 +955,7 @@ public class LitePager extends ViewGroup implements Runnable {
     child4Line = itemDistance * 3;
     child3Line = itemDistance * 4;
     child1Line = itemDistance * 5;
-    LayoutParams lp = (LayoutParams) child.getLayoutParams();
+    LiteLayoutParams lp = (LiteLayoutParams) child.getLayoutParams();
     int offset = (int) (itemDistance * mOffsetPercent);
     switch (lp.from) {
       case 0:
@@ -1030,7 +1029,7 @@ public class LitePager extends ViewGroup implements Runnable {
    * @param child 目标子View
    */
   private void updateAlphaAndScaleBy5Child(View child) {
-    LayoutParams lp = (LayoutParams) child.getLayoutParams();
+    LiteLayoutParams lp = (LiteLayoutParams) child.getLayoutParams();
     switch (lp.from) {
       case 0:
         updateAlphaAndScaleBy5Child(child, lp, mOffsetPercent);
@@ -1061,7 +1060,7 @@ public class LitePager extends ViewGroup implements Runnable {
     }
   }
 
-  private void updateAlphaAndScale2(LayoutParams lp, float offsetPercent) {
+  private void updateAlphaAndScale2(LiteLayoutParams lp, float offsetPercent) {
     float alphaProgress;
     if (Math.abs(offsetPercent) > .5F) {
       alphaProgress = (Math.abs(offsetPercent) - .5F) * 2;
@@ -1084,7 +1083,7 @@ public class LitePager extends ViewGroup implements Runnable {
     }
   }
 
-  private void updateAlphaAndScaleBy5Child(View child, LayoutParams lp, float offsetPercent) {
+  private void updateAlphaAndScaleBy5Child(View child, LiteLayoutParams lp, float offsetPercent) {
     switch (lp.to) {
       case 0:
       case 1:
@@ -1178,7 +1177,7 @@ public class LitePager extends ViewGroup implements Runnable {
    * 更新子View的不透明度、缩放比例、坐标位置，并布局
    */
   private void updateChildParamsAndLayout(View child, int baseLine) {
-    LayoutParams lp = (LayoutParams) child.getLayoutParams();
+    LiteLayoutParams lp = (LiteLayoutParams) child.getLayoutParams();
 
     child.setAlpha(lp.alpha);
     child.setScaleX(lp.scale);
@@ -1222,7 +1221,8 @@ public class LitePager extends ViewGroup implements Runnable {
     if (childCount > 4) {
       throw new IllegalStateException("LitePager can only contain 5 child!");
     }
-    LayoutParams lp = params instanceof LayoutParams ? (LayoutParams) params : new LayoutParams(params);
+    LiteLayoutParams
+        lp = params instanceof LiteLayoutParams ? (LiteLayoutParams) params : new LiteLayoutParams(params);
     lp.from = index == -1 ? childCount : index;
     if (childCount < 2) {
       lp.alpha = mMiddleAlpha;
@@ -1238,18 +1238,18 @@ public class LitePager extends ViewGroup implements Runnable {
   }
 
   @Override
-  public LayoutParams generateLayoutParams(AttributeSet attrs) {
-    return new LayoutParams(getContext(), attrs);
+  public LiteLayoutParams generateLayoutParams(AttributeSet attrs) {
+    return new LiteLayoutParams(getContext(), attrs);
   }
 
   @Override
-  protected LayoutParams generateLayoutParams(ViewGroup.LayoutParams p) {
-    return new LayoutParams(p);
+  protected LiteLayoutParams generateLayoutParams(ViewGroup.LayoutParams p) {
+    return new LiteLayoutParams(p);
   }
 
   @Override
-  protected LayoutParams generateDefaultLayoutParams() {
-    return new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+  protected LiteLayoutParams generateDefaultLayoutParams() {
+    return new LiteLayoutParams(LiteLayoutParams.WRAP_CONTENT, LiteLayoutParams.WRAP_CONTENT);
   }
 
   @Override
@@ -1300,8 +1300,8 @@ public class LitePager extends ViewGroup implements Runnable {
       adapter.onBindView(view, i);
       ViewGroup.LayoutParams lp = view.getLayoutParams();
       if (lp != null) {
-        if (!(lp instanceof LayoutParams)) {
-          view.setLayoutParams(new LayoutParams(lp));
+        if (!(lp instanceof LiteLayoutParams)) {
+          view.setLayoutParams(new LiteLayoutParams(lp));
         }
       }
       addView(view);
@@ -1504,21 +1504,21 @@ public class LitePager extends ViewGroup implements Runnable {
     protected abstract int getItemCount();
   }
 
-  static class LayoutParams extends MarginLayoutParams {
+  static class LiteLayoutParams extends MarginLayoutParams {
 
     int to, from;
     float scale;
     float alpha;
 
-    LayoutParams(Context c, AttributeSet attrs) {
+    LiteLayoutParams(Context c, AttributeSet attrs) {
       super(c, attrs);
     }
 
-    LayoutParams(int width, int height) {
+    LiteLayoutParams(int width, int height) {
       super(width, height);
     }
 
-    LayoutParams(ViewGroup.LayoutParams source) {
+    LiteLayoutParams(ViewGroup.LayoutParams source) {
       super(source);
     }
   }

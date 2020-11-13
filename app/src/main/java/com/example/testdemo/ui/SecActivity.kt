@@ -8,7 +8,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.testdemo.MainActivity
 import com.example.testdemo.R
 import kotlinx.android.synthetic.main.activity_sec.litePager
 import com.example.testdemo.view.litepager.LitePager.*;
@@ -59,10 +58,10 @@ class SecActivity : AppCompatActivity() {
   }
 
   fun onItemSelected(view: View) {
-    toast(
-        "${(((view as ViewGroup).getChildAt(0) as ViewGroup)
-            .getChildAt(1) as TextView).text} selected"
-    )
+//    toast(
+//        "${(((view as ViewGroup).getChildAt(0) as ViewGroup)
+//            .getChildAt(1) as TextView).text} selected"
+//    )
   }
 
   fun toast(str: String) {
