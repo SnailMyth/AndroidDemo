@@ -28,13 +28,5 @@ public class SecondFragment extends Fragment {
     GradientProgressView pb = view.findViewById(R.id.textview_second);
     //GradientProgressView pb2 = view.findViewById(R.id.textview_second_2);
     pb.setProgress(20);
-
-    view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        NavHostFragment.findNavController(SecondFragment.this)
-            .navigate(R.id.action_SecondFragment_to_Third);
-      }
-    });
   }
 }

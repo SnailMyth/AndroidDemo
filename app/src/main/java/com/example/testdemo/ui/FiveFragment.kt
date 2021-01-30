@@ -1,30 +1,34 @@
 package com.example.testdemo.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.example.testdemo.R
-import kotlinx.android.synthetic.main.activity_sec.litePager
-import com.example.testdemo.view.litepager.LitePager.*;
-import kotlinx.android.synthetic.main.activity_sec.status
+import com.example.testdemo.base.BaseFragment
+import com.example.testdemo.view.litepager.LitePager.STATE_DRAGGING_BOTTOM
+import com.example.testdemo.view.litepager.LitePager.STATE_DRAGGING_LEFT
+import com.example.testdemo.view.litepager.LitePager.STATE_DRAGGING_RIGHT
+import com.example.testdemo.view.litepager.LitePager.STATE_DRAGGING_TOP
+import com.example.testdemo.view.litepager.LitePager.STATE_IDLE
+import com.example.testdemo.view.litepager.LitePager.STATE_SETTLING_BOTTOM
+import com.example.testdemo.view.litepager.LitePager.STATE_SETTLING_LEFT
+import com.example.testdemo.view.litepager.LitePager.STATE_SETTLING_RIGHT
+import com.example.testdemo.view.litepager.LitePager.STATE_SETTLING_TOP
+import kotlinx.android.synthetic.main.fragment_five.litePager
+import kotlinx.android.synthetic.main.fragment_five.status
 
-class SecActivity : AppCompatActivity() {
+class FiveFragment : BaseFragment() {
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_sec)
-    val ivTemp = findViewById<ImageView>(R.id.temp_iv_1)
-//    ivTemp.translationX = ScreenUtils.getScreenWidth(this).toFloat()
-    ivTemp.setOnClickListener(View.OnClickListener {
-      startActivity(Intent(this@SecActivity, MainActivity::class.java))
-    })
 
+
+
+  override fun getLayoutId() = R.layout.fragment_five
+
+  override fun initView(view: View) {
     initLitePager()
+  }
+
+  override fun initData(savedInstanceState: Bundle?) {
+
   }
 
   private fun initLitePager() {
@@ -57,15 +61,7 @@ class SecActivity : AppCompatActivity() {
     )
   }
 
-  fun onItemSelected(view: View) {
-//    toast(
-//        "${(((view as ViewGroup).getChildAt(0) as ViewGroup)
-//            .getChildAt(1) as TextView).text} selected"
-//    )
-  }
+  private fun onItemSelected(view: View) {
 
-  fun toast(str: String) {
-    Toast.makeText(this, str, Toast.LENGTH_SHORT)
-        .show()
   }
 }

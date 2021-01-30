@@ -21,15 +21,6 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(layout.activity_main)
     checkPermissions()
-    val toolbar = findViewById<Toolbar>(id.toolbar)
-    setSupportActionBar(toolbar)
-    val fab = findViewById<FloatingActionButton>(id.fab)
-    fab.setOnClickListener { view ->
-      Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-          .setAction("Action", null)
-          .show()
-    }
-
   }
 
   private val PERMISSION_REQ_ID_RECORD_AUDIO = 22

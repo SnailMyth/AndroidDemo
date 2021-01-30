@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/box_inset_layout_padding"
-    tools:context=".ui.SecActivity"
+    tools:context=".ui.FiveFragment"
     >
 
   <com.example.testdemo.view.litepager.LitePager

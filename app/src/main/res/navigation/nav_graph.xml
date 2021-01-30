@@ -3,37 +3,63 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/mainFragment">
 
   <fragment
+    android:id="@+id/mainFragment"
+      android:name="com.example.testdemo.ui.MainFragment"
+      tools:layout="@layout/fragment_main"
+      >
+
+    <action
+        android:id="@+id/action_to_First"
+        app:destination="@id/FirstFragment" />
+
+    <action
+        android:id="@+id/action_to_Second"
+        app:destination="@id/SecondFragment" />
+
+    <action
+        android:id="@+id/action_to_Third"
+        app:destination="@id/ThirdFragment" />
+
+
+    <action
+        android:id="@+id/action_to_Four"
+        app:destination="@id/FourFragment" />
+
+    <action
+        android:id="@+id/action_to_Five"
+        app:destination="@id/FiveFragment" />
+
+  </fragment>
+
+   <fragment
       android:id="@+id/FirstFragment"
       android:name="com.example.testdemo.ui.FirstFragment"
       android:label="@string/first_fragment_label"
-      tools:layout="@layout/fragment_first">
+      tools:layout="@layout/fragment_first"/>
 
-    <action
-        android:id="@+id/action_FirstFragment_to_SecondFragment"
-        app:destination="@id/SecondFragment" />
-  </fragment>
+
   <fragment
       android:id="@+id/SecondFragment"
       android:name="com.example.testdemo.ui.SecondFragment"
       android:label="@string/second_fragment_label"
-      tools:layout="@layout/fragment_second">
-
-    <action
-        android:id="@+id/action_SecondFragment_to_Third"
-        app:destination="@id/ThirdFragment" />
-  </fragment>
+      tools:layout="@layout/fragment_second"/>
   <fragment
       android:id="@+id/ThirdFragment"
       android:name="com.example.testdemo.ui.ThirdFragment"
       android:label="@string/third_fragment_label"
-      tools:layout="@layout/fragment_third">
+      tools:layout="@layout/fragment_third"/>
+  <fragment
+      android:id="@+id/FourFragment"
+      android:name="com.example.testdemo.ui.FourFragment"
+      android:label="four_fragment_label"
+      tools:layout="@layout/fragment_four"/>
 
-    <action
-        android:id="@+id/action_ThirdFragment_to_FirstFragment"
-        app:destination="@id/FirstFragment" />
-
-  </fragment>
+  <fragment
+      android:id="@+id/FiveFragment"
+      android:name="com.example.testdemo.ui.FiveFragment"
+      android:label="four_fragment_label"
+      tools:layout="@layout/fragment_five"/>
 </navigation>

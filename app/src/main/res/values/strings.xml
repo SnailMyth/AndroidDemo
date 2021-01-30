@@ -5,6 +5,7 @@
   <string name="first_fragment_label">First Fragment</string>
   <string name="second_fragment_label">Second Fragment</string>
   <string name="third_fragment_label">Third Fragment</string>
+  <string name="four_fragment_label">Four Fragment</string>
   <string name="login_fragment_label">Login Fragment</string>
   <string name="next">Next</string>
   <string name="previous">Previous</string>
@@ -72,4 +73,6 @@
   <string name="five_child">5子View</string>
   <string name="middle">中层子View</string>
   <string name="bottom">底层子View</string>
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

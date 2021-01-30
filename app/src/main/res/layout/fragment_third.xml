@@ -4,14 +4,122 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color9"
     tools:context=".ui.ThirdFragment"
     >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toTopOf="@id/temp_layout_1"
+      app:layout_constraintTop_toTopOf="parent"
+      >
+
+    <com.example.testdemo.view.RingProgressBar
+        android:id="@+id/rpb"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:prb_has_interval="true"
+        app:prb_max="100"
+        app:prb_positive="false"
+        app:prb_ringColor="#40000000"
+        app:prb_ringProgressColor="#00DCFF"
+        app:prb_ringWidth="10dp"
+        app:prb_style="STROKE"
+        app:prb_textColor="#ffffff"
+        app:prb_textSize="27sp"
+        app:prb_textStyle="bold"
+        app:prb_text_content="second"
+        />
+
+    <com.example.testdemo.view.RingProgressBar
+        android:id="@+id/rpb1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:prb_max="100"
+        app:prb_positive="false"
+        app:prb_ringColor="#40000000"
+        app:prb_ringProgressColor="#00DCFF"
+        app:prb_ringWidth="10dp"
+        app:prb_style="STROKE"
+        app:prb_textSize="27sp"
+        app:prb_textStyle="bold"
+        app:prb_text_content="percent"
+        />
+
+
+    <com.example.testdemo.view.RingProgressBar
+        android:id="@+id/rpb2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:prb_max="100"
+        app:prb_positive="false"
+        app:prb_ringColor="#40000000"
+        app:prb_ringProgressColor="#00DCFF"
+        app:prb_ringWidth="10dp"
+        app:prb_style="STROKE"
+        app:prb_textSize="27sp"
+        app:prb_text_content="percent"
+        />
+
+
+    <com.example.testdemo.view.RingProgressBar
+        android:id="@+id/rpb3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:prb_max="100"
+        app:prb_positive="false"
+        app:prb_ringColor="#40000000"
+        app:prb_ringProgressColor="#00DCFF"
+        app:prb_ringWidth="10dp"
+        app:prb_style="STROKE"
+        app:prb_textColor="#ffffff"
+        app:prb_textSize="27sp"
+        app:prb_text_content="second"
+        />
+
+    <com.example.testdemo.view.SuperTextView
+        android:id="@+id/superTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:lineSpacingMultiplier="1.2"
+        android:minHeight="60dp"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+  </LinearLayout>
 
 
   <com.example.testdemo.view.layout.DragConstraintLayout
       android:id="@+id/temp_layout_1"
       android:layout_width="match_parent"
-      android:layout_height="400dp"
+      android:layout_height="200dp"
       app:layout_constraintBottom_toBottomOf="parent"
       tools:layout_editor_absoluteX="0dp"
       >
@@ -27,5 +135,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+
+    <ImageView
+        android:id="@+id/adapter_radio_game_result_item_iv_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_radio_game_result_out"
+        />
+
+
   </com.example.testdemo.view.layout.DragConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

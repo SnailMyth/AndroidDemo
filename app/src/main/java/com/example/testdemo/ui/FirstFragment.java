@@ -31,17 +31,6 @@ public class FirstFragment extends Fragment {
   public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
 
-    bt = view.findViewById(R.id.button_first);
-    bt.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-        NavHostFragment.findNavController(FirstFragment.this)
-            .navigate(R.id.action_FirstFragment_to_SecondFragment);
-      }
-    });
-
     mRangeBar = (RangeBar) view.findViewById(R.id.rangeBar);
     mRangeBar.setOnRangeSelectedListener(new RangeBar.OnRangeSelectedListener() {
       @Override

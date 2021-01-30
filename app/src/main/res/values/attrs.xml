@@ -25,20 +25,20 @@
     <attr name="haveProgress" format="integer" />
   </declare-styleable>
   <declare-styleable name="Wave">
-    <attr name="color" format="color"/>
-    <attr name="text" format="string"/>
+    <attr name="color" format="color" />
+    <attr name="text" format="string" />
   </declare-styleable>
 
   <declare-styleable name="RangeBar">
-    <attr name="solidBackgroundColor" format="color"/><!--solid background color. 固定未选中的进度条颜色。-->
-    <attr name="rangeColor" format="color"/><!-- selected range background color. 选中的范围颜色。-->
-    <attr name="textColor" format="color"/><!--top text color. 控件中文字颜色 -->
-    <attr name="sliderDrawable" format="reference"/><!--slider drawable resource id. 滑块资源id，左右两边相同。-->
-    <attr name="rangeHeight" format="dimension"/><!-- range bar height. 进度条高度-->
-    <attr name="textSize" format="dimension"/><!--text size . 文本大小-->
-    <attr name="verticalLineHeight" format="dimension"/><!-- vertical line height. 竖直的线的高度-->
-    <attr name="verticalPadding" format="dimension"/><!-- vertical content padding. 竖直方向的 内边距-->
-    <attr name="textArray" format="reference"/><!-- draw text in top . 顶部显示的文本数组-->
+    <attr name="solidBackgroundColor" format="color" /><!--solid background color. 固定未选中的进度条颜色。-->
+    <attr name="rangeColor" format="color" /><!-- selected range background color. 选中的范围颜色。-->
+    <attr name="textColor" format="color" /><!--top text color. 控件中文字颜色 -->
+    <attr name="sliderDrawable" format="reference" /><!--slider drawable resource id. 滑块资源id，左右两边相同。-->
+    <attr name="rangeHeight" format="dimension" /><!-- range bar height. 进度条高度-->
+    <attr name="textSize" format="dimension" /><!--text size . 文本大小-->
+    <attr name="verticalLineHeight" format="dimension" /><!-- vertical line height. 竖直的线的高度-->
+    <attr name="verticalPadding" format="dimension" /><!-- vertical content padding. 竖直方向的 内边距-->
+    <attr name="textArray" format="reference" /><!-- draw text in top . 顶部显示的文本数组-->
 
   </declare-styleable>
 
@@ -50,26 +50,72 @@
   </declare-styleable>
 
   <declare-styleable name="LitePager">
-    <attr format="enum" name="orientation">
-      <enum name="horizontal" value="0"/>
-      <enum name="vertical" value="1"/>
+    <attr name="orientation" format="enum">
+      <enum name="horizontal" value="0" />
+      <enum name="vertical" value="1" />
     </attr>
 
-    <attr format="integer" name="flingDuration"/>
-    <attr format="float" name="bottomScale"/>
-    <attr format="float" name="bottomAlpha"/>
-    <attr format="float" name="middleScale"/>
-    <attr format="float" name="middleAlpha"/>
-    <attr format="float" name="topScale"/>
-    <attr format="float" name="topAlpha"/>
-    <attr format="boolean" name="autoScroll"/>
-    <attr format="integer" name="autoScrollInterval"/>
-    <attr format="enum" name="autoScrollOrientation">
-      <enum name="left" value="0"/>
-      <enum name="right" value="1"/>
-      <enum name="up" value="0"/>
-      <enum name="down" value="1"/>
+    <attr name="flingDuration" format="integer" />
+    <attr name="bottomScale" format="float" />
+    <attr name="bottomAlpha" format="float" />
+    <attr name="middleScale" format="float" />
+    <attr name="middleAlpha" format="float" />
+    <attr name="topScale" format="float" />
+    <attr name="topAlpha" format="float" />
+    <attr name="autoScroll" format="boolean" />
+    <attr name="autoScrollInterval" format="integer" />
+    <attr name="autoScrollOrientation" format="enum">
+      <enum name="left" value="0" />
+      <enum name="right" value="1" />
+      <enum name="up" value="0" />
+      <enum name="down" value="1" />
     </attr>
 
+  </declare-styleable>
+
+  <declare-styleable name="FrameLayoutWithHole">
+    <attr name="hole_radius" format="dimension" />
+    <attr name="hole_width" format="dimension" />
+    <attr name="hole_height" format="dimension" />
+    <attr name="hole_out_background" format="color" />
+    <attr name="hole_x" format="dimension" />
+    <attr name="hole_y" format="dimension" />
+  </declare-styleable>
+
+  <declare-styleable name="RingProgressBar">
+    <attr name="prb_ringColor" format="color" />
+    <attr name="prb_ringProgressColor" format="color" />
+    <attr name="prb_textColor" format="color" />
+    <attr name="prb_textSize" format="dimension" />
+    <attr name="prb_ringWidth" format="dimension" />
+    <attr name="prb_max" format="integer" />
+    <attr name="prb_has_interval" format="boolean" />
+    <attr name="prb_positive" format="boolean" />
+    <attr name="prb_style" format="enum">
+      <enum name="STROKE" value="0" />
+      <enum name="FILL" value="1" />
+    </attr>
+    <attr name="prb_textStyle" format="enum">
+      <enum name="normal" value="0" />
+      <enum name="bold" value="1" />
+      <enum name="italic" value="2" />
+      <enum name="bold_italic" value="3" />
+    </attr>
+    <attr name="prb_text_content" format="enum">
+      <enum name="none" value="0" />
+      <enum name="percent" value="1" />
+      <enum name="second" value="2" />
+    </attr>
+  </declare-styleable>
+
+  <declare-styleable name="SuperTextView">
+    <attr name="dynamicText" format="string"/>
+    <attr name="duration" format="integer"/>
+    <attr name="selectedColor" format="color"/>
+    <attr name="dynamicStyle" format="enum">
+      <enum name="normal" value="0"/>
+      <enum name="typewriting" value="1"/>
+      <enum name="changeColor" value="2"/>
+    </attr>
   </declare-styleable>
 </resources>
