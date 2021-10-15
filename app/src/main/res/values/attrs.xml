@@ -109,13 +109,24 @@
   </declare-styleable>
 
   <declare-styleable name="SuperTextView">
-    <attr name="dynamicText" format="string"/>
-    <attr name="duration" format="integer"/>
-    <attr name="selectedColor" format="color"/>
+    <attr name="dynamicText" format="string" />
+    <attr name="duration" format="integer" />
+    <attr name="selectedColor" format="color" />
     <attr name="dynamicStyle" format="enum">
-      <enum name="normal" value="0"/>
-      <enum name="typewriting" value="1"/>
-      <enum name="changeColor" value="2"/>
+      <enum name="normal" value="0" />
+      <enum name="typewriting" value="1" />
+      <enum name="changeColor" value="2" />
     </attr>
+  </declare-styleable>
+
+  <declare-styleable name="MvpView">
+    <attr name="mvp_orientation" format="enum">
+      <enum name="left" value="1" />
+      <enum name="right" value="2" />
+    </attr>
+  </declare-styleable>
+  <declare-styleable name="FullscreenAttrs">
+    <attr name="fullscreenBackgroundColor" format="color" />
+    <attr name="fullscreenTextColor" format="color" />
   </declare-styleable>
 </resources>

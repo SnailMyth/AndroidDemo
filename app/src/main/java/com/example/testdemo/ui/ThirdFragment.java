@@ -41,7 +41,7 @@ public class ThirdFragment extends Fragment implements CustomCountDownTimer.OnCo
     mRpb2.setProgress(75);
     mRpb3 = view.findViewById(R.id.rpb3);
     mRpb3.setProgress(98);
-    mLayout.setDragView(mTextView2);
+    //mLayout.setDragView(mTextView2);
     mTextView2.setOnClickListener(v -> {
 
     });

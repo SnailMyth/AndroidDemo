@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.SixFragment"
+    >
+
+  <com.google.android.material.imageview.ShapeableImageView
+      android:id="@+id/temp_1"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_margin="10dp"
+      android:padding="4dp"
+      android:src="@drawable/img_temp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:shapeAppearance="@style/RoundedStyle1"
+      app:strokeColor="@color/colorFF788B"
+      app:strokeWidth="4dp"
+      />
+
+  <com.google.android.material.imageview.ShapeableImageView
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_margin="10dp"
+      android:padding="4dp"
+      android:src="@drawable/img_temp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:shapeAppearance="@style/RoundedStyle2"
+      app:strokeColor="@color/colorFF788B"
+      app:strokeWidth="4dp"
+      />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/dialog_radio_theme_edit_input_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="17dp"
+      android:layout_marginEnd="16dp"
+      android:background="@drawable/bg_f3_4cir"
+      android:paddingStart="16dp"
+      android:paddingEnd="0dp"
+      app:counterEnabled="true"
+      app:counterMaxLength="14"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/temp_1"
+      app:counterTextColor="@color/colorC"
+      >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dialog_radio_theme_edit_et_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:autofillHints=""
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:hint="请填写本期主题"
+        android:lines="1"
+        android:textStyle="bold"
+        android:textColor="@color/color3"
+        android:textColorHint="@color/colorC"
+        android:textSize="17sp"
+        />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

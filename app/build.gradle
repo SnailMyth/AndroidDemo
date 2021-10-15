@@ -11,7 +11,6 @@ android {
     targetSdkVersion 30
     versionCode 1
     versionName "1.0"
-
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
 
@@ -66,5 +65,14 @@ dependencies {
   implementation 'com.github.razerdp:BasePopup:2.2.11'
   implementation 'cn.hutool:hutool-all:5.5.6'
   implementation 'androidx.viewpager2:viewpager2:1.0.0'
-
+  implementation "androidx.work:work-multiprocess:2.5.0"
+  implementation "androidx.customview:customview:1.1.0"
+  api "com.facebook.fresco:fresco:1.5.0"
+  api "com.facebook.fresco:animated-base:1.5.0"
+  implementation 'androidx.paging:paging-runtime:3.0.0-beta01'
+  implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+  implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+  implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+  implementation 'com.google.code.gson:gson:2.8.6'
+  implementation 'com.github.getActivity:ShapeView:3.0'
 }

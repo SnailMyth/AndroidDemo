@@ -3,6 +3,7 @@ package com.example.testdemo.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.view.View;
 
 public class SizeUtil {
   /**
@@ -83,5 +84,23 @@ public class SizeUtil {
   public static float sp2pxF(Context context,float spValue) {
     final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
     return spValue * fontScale + 0.5f;
+  }
+
+  // View宽，高
+  public static int[] getLocation(View v) {
+    int[] loc = new int[4];
+    int[] location = new int[2];
+    v.getLocationOnScreen(location);
+    loc[0] = location[0];
+    loc[1] = location[1];
+    int w = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+    int h = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+    v.measure(w, h);
+
+    loc[2] = v.getMeasuredWidth();
+    loc[3] = v.getMeasuredHeight();
+
+    //base = computeWH();
+    return loc;
   }
 }

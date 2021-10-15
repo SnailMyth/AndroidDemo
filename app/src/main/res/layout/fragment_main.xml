@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,36 +8,78 @@
     tools:context=".ui.MainFragment"
     >
 
-    <Button
-        android:id="@+id/bt1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="First"
-        />
-    <Button
-        android:id="@+id/bt2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Second"
-        />
-    <Button
-        android:id="@+id/bt3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Third"
-        />
-    <Button
-        android:id="@+id/bt4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Four"
-        />
+  <com.hjq.shape.view.ShapeTextView
+      android:id="@+id/bt1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:clickable="true"
+      android:gravity="center"
+      android:padding="10dp"
+      android:text="First"
+      android:textColor="@android:color/white"
+      android:textSize="14sp"
+      app:shape="rectangle"
+      app:shape_radius="20dp"
+      app:shape_solidColor="#5A8DDF"
+      app:shape_solidPressedColor="#AA5A8DDF"
+      android:focusable="true"
+      />
+  <com.hjq.shape.view.ShapeTextView
+      android:id="@+id/bt2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Second"
+      app:shape="rectangle"
+      android:padding="10dp"
+      android:layout_margin="10dp"
+      android:textSize="14sp"
+      app:shape_radius="20dp"
+      android:gravity="center"
+      app:shape_gradientType="linear"
+      app:shape_startColor="#AA5A8DDF"
+      app:shape_endColor="@color/colorFF9A44"
+      />
 
-    <Button
-        android:id="@+id/bt5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Five"
-        />
+  <com.hjq.shape.view.ShapeTextView
+      android:id="@+id/bt3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Third"
+      android:gravity="center"
+      android:layout_margin="10dp"
+      android:padding="10dp"
+      app:shape="rectangle"
+      app:shape_dashGap="5dp"
+      app:shape_dashWidth="10dp"
+      app:shape_strokeColor="#ffff0000"
+      app:shape_strokeWidth="1dp"
+      />
+  <Button
+      android:id="@+id/bt4"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Four"
+      />
+
+  <Button
+      android:id="@+id/bt5"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Five"
+      />
+  <Button
+      android:id="@+id/bt6"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Six"
+      />
+
+  <Button
+      android:id="@+id/bt7"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="MotionLayout"
+      />
 
 </LinearLayout>

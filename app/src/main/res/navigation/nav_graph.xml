@@ -6,10 +6,9 @@
     app:startDestination="@id/mainFragment">
 
   <fragment
-    android:id="@+id/mainFragment"
+      android:id="@+id/mainFragment"
       android:name="com.example.testdemo.ui.MainFragment"
-      tools:layout="@layout/fragment_main"
-      >
+      tools:layout="@layout/fragment_main">
 
     <action
         android:id="@+id/action_to_First"
@@ -21,7 +20,9 @@
 
     <action
         android:id="@+id/action_to_Third"
-        app:destination="@id/ThirdFragment" />
+        app:destination="@id/ThirdFragment"
+        app:enterAnim="@anim/push_bottom_in"
+        app:exitAnim="@anim/push_bottom_out" />
 
 
     <action
@@ -32,34 +33,70 @@
         android:id="@+id/action_to_Five"
         app:destination="@id/FiveFragment" />
 
+    <action
+        android:id="@+id/action_to_Six"
+        app:destination="@id/SixFragment" />
+
+    <action
+        android:id="@+id/action_to_Motion"
+        app:destination="@id/MotionMainFragment" />
   </fragment>
 
-   <fragment
+  <fragment
       android:id="@+id/FirstFragment"
       android:name="com.example.testdemo.ui.FirstFragment"
       android:label="@string/first_fragment_label"
-      tools:layout="@layout/fragment_first"/>
+      tools:layout="@layout/fragment_first" />
 
 
   <fragment
       android:id="@+id/SecondFragment"
       android:name="com.example.testdemo.ui.SecondFragment"
       android:label="@string/second_fragment_label"
-      tools:layout="@layout/fragment_second"/>
+      tools:layout="@layout/fragment_second" />
   <fragment
       android:id="@+id/ThirdFragment"
       android:name="com.example.testdemo.ui.ThirdFragment"
       android:label="@string/third_fragment_label"
-      tools:layout="@layout/fragment_third"/>
+      tools:layout="@layout/fragment_third" />
   <fragment
       android:id="@+id/FourFragment"
       android:name="com.example.testdemo.ui.FourFragment"
       android:label="four_fragment_label"
-      tools:layout="@layout/fragment_four"/>
+      tools:layout="@layout/fragment_four" />
 
   <fragment
       android:id="@+id/FiveFragment"
       android:name="com.example.testdemo.ui.FiveFragment"
       android:label="four_fragment_label"
-      tools:layout="@layout/fragment_five"/>
+      tools:layout="@layout/fragment_five" />
+
+  <fragment
+      android:id="@+id/SixFragment"
+      android:name="com.example.testdemo.ui.SixFragment"
+      android:label="six_fragment_label"
+      tools:layout="@layout/fragment_six" />
+
+
+  <fragment
+      android:id="@+id/MotionMainFragment"
+      android:name="com.example.testdemo.ui.MotionMainFragment"
+      android:label="motion_main_fragment_label"
+      tools:layout="@layout/fragment_motion_layout" >
+
+    <action
+        android:id="@+id/action_to_Simple"
+        app:destination="@id/SimpleMotion" />
+
+
+  </fragment>
+
+
+  <fragment
+      android:id="@+id/SimpleMotion"
+      android:name="com.example.testdemo.ui.motion.SimpleMotionFragment"
+      android:label="motion_simple_fragment_label"
+      tools:layout="@layout/fragment_simple_motion" >
+  </fragment>
+
 </navigation>
