@@ -25,7 +25,7 @@ public class CanvasView extends View {
 
   public CanvasView(Context context, @Nullable AttributeSet attrs) {
     super(context, attrs);
-    mIconBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.icon_del_img);
+    mIconBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_redb);
     pos = new float[2];
     tan = new float[2];
   }

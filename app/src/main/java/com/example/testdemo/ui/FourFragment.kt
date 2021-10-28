@@ -180,7 +180,7 @@ class FourFragment : BaseFragment() {
     builder.append("sad sad")
     start = builder.length
     builder.append("[emotion:tv_sad]")
-    placeHolder = resources.getDrawable(R.mipmap.ic_launcher)
+    placeHolder = resources.getDrawable(R.drawable.ic_redb)
     span = Builder("http://static.yo9.com/web/emotions/tv_sad.png")
         .setLayout(150, 150)
         .setPlaceHolderImage(placeHolder)

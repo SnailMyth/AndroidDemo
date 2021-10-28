@@ -10,7 +10,6 @@ import com.facebook.common.logging.FLog;
 import com.facebook.common.logging.FLogDefaultLoggingDelegate;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.imagepipeline.core.ImagePipelineConfig;
-import com.tencent.mars.xlog.Xlog;
 
 /**
  * @author :
