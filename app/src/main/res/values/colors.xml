@@ -49,4 +49,12 @@
   <color name="colorF8">#F8F8F8</color>
   <color name="colorAD">#ADADAD</color>
   <color name="colorD8">#D8D8D8</color>
+  <color name="colora542ff">#a542ff</color>
+  <color name="colora542ff_30">#4Da542ff</color>
+  <color name="colora542ff_80">#a542ff</color>
+  <color name="colora542ff_0">#00a542ff</color>
+  <color name="color7281ff">#7281ff</color>
+  <color name="color7281ff_30">#4D7281ff</color>
+  <color name="color7281ff_80">#7281ff</color>
+  <color name="color7281ff_0">#007281ff</color>
 </resources>

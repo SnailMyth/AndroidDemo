@@ -57,6 +57,10 @@ class MainFragment : BaseFragment() {
         }
     view.findViewById<Button>(R.id.bt7)
         .setOnClickListener {
+          show(R.id.action_to_Seven)
+        }
+    view.findViewById<Button>(R.id.bt8)
+        .setOnClickListener {
           show(R.id.action_to_Motion)
         }
   }

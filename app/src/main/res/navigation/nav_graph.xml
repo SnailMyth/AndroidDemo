@@ -38,6 +38,10 @@
         app:destination="@id/SixFragment" />
 
     <action
+        android:id="@+id/action_to_Seven"
+        app:destination="@id/SevenFragment" />
+
+    <action
         android:id="@+id/action_to_Motion"
         app:destination="@id/MotionMainFragment" />
   </fragment>
@@ -77,6 +81,11 @@
       android:label="six_fragment_label"
       tools:layout="@layout/fragment_six" />
 
+  <fragment
+      android:id="@+id/SevenFragment"
+      android:name="com.example.testdemo.ui.SevenFragment"
+      android:label="six_fragment_label"
+      tools:layout="@layout/fragment_seven" />
 
   <fragment
       android:id="@+id/MotionMainFragment"

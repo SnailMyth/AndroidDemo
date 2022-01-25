@@ -43,4 +43,41 @@
     <item name="android:background">@color/black_overlay</item>
     <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
   </style>
+
+  <declare-styleable name="SoundSpectrumLinearView">
+    <!--横线的宽-->
+    <attr name="sslv_lineWidth" format="dimension" />
+    <!--最大线条数-->
+    <attr name="sslv_line_count" format="integer" />
+    <!--横线的间距-->
+    <attr name="sslv_lineGap" format="dimension" />
+    <!--动画时间-->
+    <attr name="sslv_duration" format="integer" />
+    <!--每个线条动画播放一次的时间-->
+    <attr name="sslv_once_time" format="integer" />
+    <attr name="sslv_auto_play" format="boolean" />
+  </declare-styleable>
+
+  <declare-styleable name="LinearSemicircleAlphaView">
+    <!--动画时间-->
+    <attr name="lsav_duration" format="integer" />
+  </declare-styleable>
+
+  <declare-styleable name="LivingHeadView2">
+    <attr name="lv_head_size" format="dimension" />
+    <attr name="living_wave_height" format="dimension" />
+  </declare-styleable>
+
+  <declare-styleable name="HeadView">
+    <attr name="head_border_width" format="dimension" />
+    <attr name="head_border_color" format="color" />
+    <!--  有挂件时，挂件的尺寸  -->
+    <attr name="head_pendant_size" format="dimension" />
+    <attr name="head_pendant_scale" format="float" />
+    <attr name="android:src" />
+    <attr name="android:scaleType" />
+
+
+  </declare-styleable>
+
 </resources>
